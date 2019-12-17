@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include <math.h>
 using namespace std;
 
@@ -30,19 +29,9 @@ int main(){
                 inputGLBB = getGerakLurusBerubahBeraturan();
                 hitungGerakLurusBerubahBeraturan(inputGLBB);
                 break;
-            /*
-            case 3:
-                cout << "\nGerak Parabola\n";
-                break;
-            case 4:
-                cout << "\nGerak Jatuh Bebas\n";
-                break;
-            case 5:
-                cout << "\nGerak Vertikal ke Atas\n";
-                break;
-            */
             default:
                 cout << "\nERROR : Input Tidak Valid\n";
+                goto labelLanjut;
                 break;
         }
 
@@ -55,12 +44,13 @@ int main(){
         }else if( (lanjut=='n') | (lanjut=='N') ){
             break;
         }else{
-            goto labelLanjut;
+            cout << "\nERROR : Input Tidak Valid\n";
+            break;
         }
         
     }
     labelExit:
-    cout << "Akhir dari program" << endl;
+    cout << "\nAkhir dari program" << endl;
 
     cin.get();
     return 0;
@@ -81,9 +71,6 @@ int getPilihan(){
     cout << "NOTE : Semua satuan yang diinputkan dalam program ini harus dalam satuan SI (Satuan Internasional)\n";
     cout << "1. Gerak Lurus Beraturan (GLB)\n";
     cout << "2. Gerak Lurus Berubah Beraturan (GLBB)\n";
-    //cout << "3. Gerak Parabola\n";
-    //cout << "4. Gerak Jatuh Bebas\n";
-    //cout << "5. Gerak Vertikal ke Atas\n";
     cout << "3. Exit\n";
     cout << "Pilih [1-3]?: ";
     cin >> input;
@@ -143,17 +130,17 @@ int hitungGerakLurusBeraturan(int input){
 
 int getGerakLurusBerubahBeraturan(){
     int input;
-    cout << "1. Mencari Kecepatan Awal (Vo) Tanpa Variabel Jarak (s)\n";
-    cout << "2. Mencari Kecepatan Awal (Vo) Tanpa Variabel Kecepatan Akhir (Vt)\n";
-    cout << "3. Mencari Kecepatan Awal (Vo) Tanpa Variabel Waktu (t)\n";
-    cout << "4. Mencari Kecepatan Akhir (Vt) Tanpa Variabel Jarak (s)\n";
-    cout << "5. Mencari Kecepatan Akhir (Vt) Tanpa Variabel Waktu (t)\n";
-    cout << "6. Mencari Percepatan (a) Tanpa Variabel Jarak (s)\n";
-    cout << "7. Mencari Percepatan (a) Tanpa Variabel Kecepatan Akhir (Vt)\n";
-    cout << "8. Mencari Percepatan (a) Tanpa Variabel Waktu (t)\n";
-    cout << "9. Mencari Jarak (s) Tanpa Variabel Kecepatan Akhir (Vt)\n";
-    cout << "10. Mencari Jarak (s) Tanpa Variabel Waktu (t)\n";
-    cout << "11. Mencari Waktu (t) Tanpa Variabel Jarak (s)\n";
+    cout << "1. Mencari Kecepatan Awal (Vo) Jika Variabel Jarak (s) Tidak Diketahui\n";
+    cout << "2. Mencari Kecepatan Awal (Vo) Jika Variabel Kecepatan Akhir (Vt) Tidak Diketahui\n";
+    cout << "3. Mencari Kecepatan Awal (Vo) Jika Variabel Waktu (t) Tidak Diketahui\n";
+    cout << "4. Mencari Kecepatan Akhir (Vt) Jika Variabel Jarak (s) Tidak Diketahui\n";
+    cout << "5. Mencari Kecepatan Akhir (Vt) Jika Variabel Waktu (t) Tidak Diketahui\n";
+    cout << "6. Mencari Percepatan (a) Jika Variabel Jarak (s) Tidak Diketahui\n";
+    cout << "7. Mencari Percepatan (a) Jika Variabel Kecepatan Akhir (Vt) Tidak Diketahui\n";
+    cout << "8. Mencari Percepatan (a) Jika Variabel Waktu (t) Tidak Diketahui\n";
+    cout << "9. Mencari Jarak (s) Jika Variabel Kecepatan Akhir (Vt) Tidak Diketahui\n";
+    cout << "10. Mencari Jarak (s) Jika Variabel Waktu (t) Tidak Diketahui\n";
+    cout << "11. Mencari Waktu (t) Jika Variabel Jarak (s) Tidak Diketahui\n";
     cout << "12. Exit\n";
     cout << "Pilih [1-12]?: ";
     cin >> input;
