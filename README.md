@@ -1,5 +1,6 @@
-# Kinematics Calculator
+### Kinematic Calculator
 Well this is my first C++ program that I push it to github :D </br>
+Actually this is college my assignment, some of comment on source code is documented using Indonesian language. </br>
 This program based on equations of motion with constant acceleration. </br>
 To see more about classical physics equation, you can visit this [wikipedia link](https://en.wikipedia.org/wiki/List_of_equations_in_classical_mechanics) </br>
 #### Equations of motion (constant acceleration)
